@@ -1,9 +1,9 @@
 import cv2
-
 import os
+import sys
 
-image_folder = "images"
-output_folder = "output_images"
+image_folder = sys.argv[1]  # "images"
+output_folder = sys.argv[2]  # "output_images"
 image_files = [f for f in os.listdir(image_folder) if f.endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif'))]
 os.makedirs(output_folder, exist_ok=True)
 for image_file in image_files:

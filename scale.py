@@ -1,8 +1,9 @@
 import os
 import cv2
+import sys
 
-image_folder = "output_images"
-output_folder = "output_scaled_images"
+image_folder = sys.argv[1]  # "images"
+output_folder = sys.argv[2]
 scaling_factor = 0.5
 image_files = [f for f in os.listdir(image_folder) if f.endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif'))]
 os.makedirs(output_folder, exist_ok=True)
