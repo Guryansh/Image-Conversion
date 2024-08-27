@@ -4,7 +4,7 @@ import sys
 
 image_folder = sys.argv[1]  # "images"
 output_folder = sys.argv[2]
-scaling_factor = 0.5
+scaling_factor = sys.argv[3]
 image_files = [f for f in os.listdir(image_folder) if f.endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif'))]
 os.makedirs(output_folder, exist_ok=True)
 for image_file in image_files:
